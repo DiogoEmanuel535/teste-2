@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <style>
+        h1.titulo{ font-size: 0.8rem;}
+        main{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            gap: 2px;
+            margin:0 auto;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            border: 2px solid #ddd;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 class="titulo">Inversor de Nomes</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input for="text" id="nome" name="nome" />
+            <input type="button" value="Enviar" onclick="InversorNome()"/>
+        </form>
+        <h1 id="Resultado"></h1>
+    </main>
+  <script>
+    function InversorNome(nome){
+        const nome= document.getElementById("nome").value;
+        const InversorNome = nome.split("").reverse().join("");
+        document.getElementById("resultado").textContent = InversorNome;
+    }
+  </script>
+</body>
+</html>
